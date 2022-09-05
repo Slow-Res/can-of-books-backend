@@ -9,7 +9,13 @@ const CreateBook = async (req, res) => {
 
   try {
     await newBook.save();
-    res.status(201).send({ Message: "New Book Created", error: false });
+    BookModel.find({}, (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    });
   } catch (error) {
     console.log(error.message);
     res.status(500).send({ Message: error.message, error: true });
