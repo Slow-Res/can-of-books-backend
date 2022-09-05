@@ -6,8 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-const PORT = process.env.PORT || 3001;
-
+//const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 function ServerInit() {
   app.listen(PORT, () => console.log(`listening on ${PORT}`));
   app.get("/", (req, res) => {
