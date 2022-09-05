@@ -4,27 +4,26 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 const PORT = process.env.PORT || 3001;
 
-const createBook = require("./Controllers/MockData");
-const BookModel = require("./Models/book");
-
-// createBook("TEST BOOK ", "THIS IS JUST A TEST BOOK FOR DEMO", "IN STOCK");
-// createBook(
-//   "JUST A BOOK ",
-//   "DEMO ROMANCE BOOK, THIS IS JUST A TEST BOOK FOR DEMO",
-//   "OUT STOCK"
-// );
-
-app.get("/books", (request, res) => {
-  BookModel.find({}, (err, result) => {
-    if (err) {
-      console.log(err);
-    } else {
-      res.send(result);
-    }
+function ServerInit() {
+  app.listen(PORT, () => console.log(`listening on ${PORT}`));
+  app.get("/", (req, res) => {
+    res.send("<h1>Welcome to Books API </h1>");
   });
-});
+}
 
-app.listen(PORT, () => console.log(`listening on ${PORT}`));
+/******************************************* */
+const FetchBooks = require("./Controllers/FetchBooks");
+const AddBook = require("./Controllers/AddBook");
+const DeleteBook = require("./Controllers/DeleteBook");
+const BookModel = require("./Models/book");
+/******************************************* */
+
+app.get("/books", FetchBooks);
+app.post("/book", AddBook);
+app.delete("/deleteBook/:id", DeleteBook);
+
+ServerInit();
