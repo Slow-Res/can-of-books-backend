@@ -9,7 +9,7 @@ const CreateBook = async (req, res) => {
 
   try {
     await newBook.save();
-    res.status(301).send({ Message: "New Book Created", error: false });
+    res.status(201).send({ Message: "New Book Created", error: false });
   } catch (error) {
     console.log(error.message);
     res.status(500).send({ Message: error.message, error: true });
