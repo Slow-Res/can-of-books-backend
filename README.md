@@ -1,11 +1,71 @@
-# Start your own "Can of Books" App
+# Books-API
 
-This repository has starter code to begin work on creating your own online bookshelf.
+**Author**: Abdelrahman Alasal
+**Version**: 1.1.0 
 
-## What can books do?
+## Overview
 
-Books are life-changing. They have the power to enlighten, educate, entertain, heal, and help us grow. Build out this code base to create an web app to track what books have impacted you, and what's recommended to read next.
+<br>
 
-## Use this template
+> Creating a NodeJs Express server runtime  <br>
 
-Clone this repo to your own account with the green "Use this template" button. Then, add any collaborators. Now you are ready to start adding features! Deploy your site to let the world know which books have had the greatest impact on you, and what's recommended. Enjoy!
+> The server is connected to a MongoDB localy  <br>
+
+> We Seeded the database with data to fetch to a React Frontend <br>
+
+> We are working on a RESTful API's, currently it contains (GET,Delete,CREATE)
+
+
+
+
+<br>
+
+## Getting Started
+
+<br>
+
+> All Packages included in the package.json  <br>
+
+> The starting file is server.js <br>
+
+> Run in the terminal : npm install  <br>
+
+> Provide the MongoDb connection string to the book.js in the Models
+
+
+
+<br>
+
+
+## Architecture
+
+<br>
+
+> We are using express as runtime enviroment for the server  <br>
+
+> We are using mongoose package to interact with the database <br>
+
+> Following the MVC pattern architecture   <br>
+
+<br>
+
+
+## Change Log
+
+> We Added fetch service to serve the data in the MongoDB   
+
+> We Added Add Book Feature (Registartion) new book  to the database  <br>
+
+> We Added Deleting Book Feature from the database   <br>
+
+> We Created an online database (MongoDB Atlas) <br>
+
+## Estimates
+
+> Took me 3 Hours to finish 
+
+## Credit and Collaborations
+
+<br>
+
+> This lab has been done by Islam alghoul, Abdelrhaman alasal
