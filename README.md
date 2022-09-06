@@ -1,7 +1,7 @@
 # Books-API
 
 **Author**: Abdelrahman Alasal
-**Version**: 1.1.0 
+**Version**: 1.3.0 
 
 ## Overview
 
@@ -15,7 +15,7 @@
 
 > We are working on a RESTful API's, currently it contains (GET,Delete,CREATE)
 
-
+> We added Update API (PUT), now we completed all CRUD operations
 
 
 <br>
@@ -60,9 +60,11 @@
 
 > We Created an online database (MongoDB Atlas) <br>
 
+> We Added updateBook route by their id
+
 ## Estimates
 
-> Took me 3 Hours to finish 
+> Took me 1 Hour to finish 
 
 ## Credit and Collaborations
 
