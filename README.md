@@ -1,7 +1,7 @@
 # Books-API
 
 **Author**: Abdelrahman Alasal
-**Version**: 1.3.0 
+**Version**: 1.4.0 
 
 ## Overview
 
@@ -16,6 +16,9 @@
 > We are working on a RESTful API's, currently it contains (GET,Delete,CREATE)
 
 > We added Update API (PUT), now we completed all CRUD operations
+
+> All CRUD now is for users by email
+
 
 
 <br>
@@ -62,9 +65,11 @@
 
 > We Added updateBook route by their id
 
+> We Adjusted All crud services to be by email only, so can users get only their data
+
 ## Estimates
 
-> Took me 1 Hour to finish 
+> Took me 2 Hour to finish 
 
 ## Credit and Collaborations
 

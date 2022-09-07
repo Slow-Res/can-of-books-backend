@@ -17,14 +17,16 @@ function ServerInit() {
 
 /******************************************* */
 const FetchBooks = require("./Controllers/FetchBooks");
+const FetchUsersBooks = require("./Controllers/FetchUsersBooks");
 const AddBook = require("./Controllers/AddBook");
 const DeleteBook = require("./Controllers/DeleteBook");
 const UpdateBook = require("./Controllers/UpdateBook");
 /******************************************* */
 
-app.get("/books", FetchBooks);
-app.post("/book", AddBook);
-app.delete("/deleteBook/:id", DeleteBook);
-app.put("/updateBook/:id", UpdateBook);
+//app.get("/books", FetchBooks);
+app.get("/books/:email", FetchUsersBooks);
+app.post("/book/:email", AddBook);
+app.delete("/deleteBook/:id/:email", DeleteBook);
+app.put("/updateBook/:id/:email", UpdateBook);
 
 ServerInit();

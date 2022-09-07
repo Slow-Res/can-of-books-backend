@@ -14,7 +14,7 @@ const UpdateBook = (req, res) => {
         console.log(err);
         res.status(500).send(err);
       } else {
-        BookModel.find({}, (err, result) => {
+        BookModel.find({ email: req.params.email }, (err, result) => {
           if (err) {
             res.status(500).send(err);
           } else {
