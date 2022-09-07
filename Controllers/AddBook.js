@@ -5,11 +5,14 @@ const CreateBook = async (req, res) => {
     title: req.body.title,
     description: req.body.description,
     status: req.body.status,
+    email: req.body.email,
+    name: req.body.name,
   });
 
   try {
     await newBook.save();
-    BookModel.find({}, (err, result) => {
+
+    BookModel.find({ email: req.body.email }, (err, result) => {
       if (err) {
         console.log(err);
       } else {
